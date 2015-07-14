@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Configuración del Diseño de Casos de Prueba</h1>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <%= form_tag({:controller => :excel, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
+        <input value="<%= @path %>" name="path" style="display: none"/>
+        <input value="<%= @extension %>" name="extension" style="display: none"/>
+        <div class="form-group">
+          <label for="cu">Caso de Uso</label>
+          <select class="form-control" id="cu" name="cu" required="">
+                <option> - Seleccione un Caso de Uso - </option>
+                <% i = 0 %>
+                <% @casos_usos.each do |cu| %>
+                    <option value="<%=i%>" > <%= cu %> </option>
+                    <% i = i + 1 %>
+                <% end %>
+          </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sprint">Sprint</label>
+            <input type="number" value="1" min="1" class="form-control" id="sprint" name="sprint">
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name='prioridad'> Con prioridad
+          </label>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Generar Excel</button>
+      <% end %>
+      </div>
+    </div>
+</div>

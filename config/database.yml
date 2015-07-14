@@ -1,0 +1,25 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: desing_test_development
+  pool: 5
+  username: javier
+  password: javier
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: desing_test_test
+  pool: 5
+  username: javier
+  password: javier
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: desing_test_production
+  pool: 5
+  username: javier
+  password: javier
