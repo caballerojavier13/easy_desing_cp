@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree
+//= require bootstrap.min
 
 
 $(document).on('change', '.btn-file', function() {

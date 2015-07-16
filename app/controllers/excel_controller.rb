@@ -7,7 +7,7 @@ class ExcelController < ApplicationController
   skip_before_action :verify_authenticity_token
   def download
 
-    @begin
+    begin
       if params[:extension] == 'xlsx'
         b = Roo::Excelx.new(params[:path])
       else
@@ -29,14 +29,12 @@ class ExcelController < ApplicationController
 
       cu = b.cell(1,1)
 
-    #rescue
-    #  redirect_to '/'
-    #end
+
     num_cp = 1
 
     last_us = @us.at(0)
 
-    short_cu = ''
+    short_cu = params[:nombre_corto].to_s
 
     0.upto(@casos_prueba.size - 1 ) do |i|
       if @us.at(i).to_i != last_us
@@ -100,6 +98,7 @@ class ExcelController < ApplicationController
         con_prioridad = true
         altura_calculada = 120
         fila_impar = [content_1_middle, content_1_middle, content_1_middle, content_1_no_warp, content_1_middle, content_1_middle, content_1_fecha, content_1_middle, content_1_left, content_1_left]
+        fila_impar_sin_prioridad = [content_1_middle, content_1_middle, content_1_middle, content_1_no_warp, content_1_middle, content_1_fecha, content_1_middle, content_1_left, content_1_left]
         if params[:prioridad]
           ws.add_row ['CU',	'US',	'Subject',	'Test Name',	'Descripcion',	'Prioridad',	'Fecha',	'Step Name',	'Step Description',	'Expected Result'], :style => header
 
@@ -111,7 +110,7 @@ class ExcelController < ApplicationController
 
             subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
-            ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'Descripcion',	'3 - Media',	Date.today,	'Step 1',	'Step Description',	'<Expected Result>'], :style => fila_impar, :height=> altura_calculada
+            ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	'3 - Media',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar, :height=> altura_calculada
 
 
 
@@ -125,6 +124,22 @@ class ExcelController < ApplicationController
 
         else
           ws.add_row ['CU',	'US',	'Subject',	'Test Name',	'Descripcion',	'Fecha',	'Step Name',	'Step Description',	'Expected Result'], :style => header
+
+          0.upto(@casos_prueba.size - 1 ) do |i|
+            us = @us.at(i).to_s.split('.')[0]
+            if us.to_i < 10
+              us = '0' + us.to_s
+            end
+
+            subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
+
+            ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar_sin_prioridad, :height=> altura_calculada
+
+
+
+          end
+
+
         end
 
         ws.column_info.to_a.at(0).width = 24
@@ -137,7 +152,7 @@ class ExcelController < ApplicationController
 
       if params[:prioridad]
         wb.add_worksheet(:name => 'Validaciones - Data') do  |ws|
-          ws.add_row ['Prioridad']
+          ws.add_row ['Prioridad'] , :style => header
           ws.add_row ['1 - Critico']
           ws.add_row ['2 - Alta']
           ws.add_row ['3 - Media']
@@ -147,9 +162,15 @@ class ExcelController < ApplicationController
 
     end
 
-    p.serialize("#{Rails.root}/tmp/excel_out/diseño.xlsx")
+    tmpfile = Tempfile.new(['diseño','.xlsx'], "#{Rails.root}/tmp/excel_out/")
 
-    send_file "#{Rails.root}/tmp/excel_out/diseño.xlsx"
+    p.serialize tmpfile.path
+
+    send_file tmpfile.path , :filename => short_cu.to_s + '.xlsx'
+
+    rescue
+      redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
+    end
 
   end
 
