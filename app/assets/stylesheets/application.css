@@ -1,5 +1,11 @@
 //*= require bootstrap
-//*= require datepicker3
+
+
+html{
+
+}
+
+
 
 .jumbotron{
   border: solid #337ab7;
@@ -20,7 +26,6 @@
   text-align: right;
   filter: alpha(opacity=0);
   opacity: 0;
-  background: red;
   cursor: inherit;
   display: block;
 }

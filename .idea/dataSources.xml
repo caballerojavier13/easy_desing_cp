@@ -17,7 +17,7 @@
     </data-source>
     <data-source source="LOCAL" name="Rails Facilitador de Diseño Web: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="12d7f6fe-c2b5-420f-9348-f02693f815d7">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:desing_test_development</jdbc-url>
+      <jdbc-url>jdbc:postgresql:credit_control_development</jdbc-url>
       <user-name>javier</user-name>
       <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
       <libraries>
@@ -31,7 +31,7 @@
     </data-source>
     <data-source source="LOCAL" name="Rails Facilitador de Diseño Web: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="786ec007-a45f-4347-9ebd-cb6ca7a74f1b">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:desing_test_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql:credit_control_production</jdbc-url>
       <user-name>javier</user-name>
       <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
       <libraries>
