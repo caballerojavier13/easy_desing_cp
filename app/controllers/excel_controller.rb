@@ -149,7 +149,7 @@ class ExcelController < ApplicationController
 
           ws.add_data_validation('F2:F' + @us.size.to_s, {
               :type => :list,
-              :formula =>'1 - Critico;2 - Alta;3 - Media;4 - Baja',
+              :origen =>'1 - Critico;2 - Alta;3 - Media;4 - Baja',
               :showDropDown => false})
 
 
