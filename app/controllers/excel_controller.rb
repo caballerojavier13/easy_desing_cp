@@ -175,9 +175,6 @@ class ExcelController < ApplicationController
             end
 
 
-
-
-
           end
 
 
@@ -223,23 +220,26 @@ class ExcelController < ApplicationController
 
     @extension = file.original_filename.split('.').last
 
-    tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/")
+    #tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/")
+
+    path = "#{Rails.root}/tmp/"
+    filename = "#{file.original_filename.split('.').first}#{Process.pid}.#{@extension}"
+    tmp_file = Rails.root.join(path, filename)
 
     File.open(tmp_file, 'wb') do |f|
       f.write file.read
+      f.close
     end
 
-    tmp_file.close
+
 
     @casos_usos = Array.new
-
-    if @extension == 'xlsx'
-      s = Roo::Excelx.new(tmp_file.path)
-    else
-      s = Roo::Excel.new(tmp_file.path)
-    end
-
-    @path = tmp_file.path
+      if @extension == 'xlsx'
+        s = Roo::Excelx.new(tmp_file.to_s)
+      else
+        s = Roo::Excel.new(tmp_file.to_s)
+      end
+    @path = tmp_file
 
     s.each_with_pagename do |name, sheet|
       #p name
