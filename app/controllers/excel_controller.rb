@@ -98,6 +98,8 @@ class ExcelController < ApplicationController
         con_prioridad = true
         altura_calculada = 120
         fila_impar = [content_1_middle, content_1_middle, content_1_middle, content_1_no_warp, content_1_middle, content_1_middle, content_1_fecha, content_1_middle, content_1_left, content_1_left]
+        fila_par = [content_1_middle_par, content_1_middle_par, content_1_middle_par, content_1_no_warp_par, content_1_middle_par, content_1_middle_par, content_1_fecha_par, content_1_middle_par, content_1_left_par, content_1_left_par]
+
         fila_impar_sin_prioridad = [content_1_middle, content_1_middle, content_1_middle, content_1_no_warp, content_1_middle, content_1_fecha, content_1_middle, content_1_left, content_1_left]
         if params[:prioridad]
           ws.add_row ['CU',	'US',	'Subject',	'Test Name',	'Descripcion',	'Prioridad',	'Fecha',	'Step Name',	'Step Description',	'Expected Result'], :style => header
@@ -162,7 +164,7 @@ class ExcelController < ApplicationController
 
     end
 
-    tmpfile = Tempfile.new(['diseño','.xlsx'], "#{Rails.root}/tmp/excel_out/")
+    tmpfile = Tempfile.new(['diseño','.xlsx'], "#{Rails.root}/tmp/")
 
     p.serialize tmpfile.path
 
@@ -182,7 +184,7 @@ class ExcelController < ApplicationController
 
     @extension = file.original_filename.split('.').last
 
-    tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/excel_in/")
+    tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/")
 
     File.open(tmp_file, 'wb') do |f|
       f.write file.read

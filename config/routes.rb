@@ -1,6 +1,6 @@
 FacilitadorDeDiseOWeb::Application.routes.draw do
 
-  get 'excel/download' => 'excel#download'
+  get 'excel/download' => 'home#index'
 
   post 'excel/download' => 'excel#download'
 
