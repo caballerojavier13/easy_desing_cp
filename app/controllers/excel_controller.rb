@@ -79,17 +79,35 @@ class ExcelController < ApplicationController
       content_1_left = styles.add_style :bg_color => 'B0B0B0', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :left,
                                                                                                                                                    :vertical => :center ,
                                                                                                                                                    :wrap_text => true}
+
+      content_1_left_par = styles.add_style :bg_color => 'FFFFFF', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :left,
+                                                                                                                    :vertical => :center ,
+                                                                                                                    :wrap_text => true}
+
       content_1_no_warp = styles.add_style :bg_color => 'B0B0B0', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :left,
                                                                                                                                                         :vertical => :center ,
                                                                                                                                                         :wrap_text => false}
+
+      content_1_no_warp_par = styles.add_style :bg_color => 'FFFFFF', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :left,
+                                                                                                                        :vertical => :center ,
+                                                                                                                        :wrap_text => false}
+
 
       content_1_middle = styles.add_style :bg_color => 'B0B0B0', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :center,
                                                                                                                                                    :vertical => :center ,
                                                                                                                                                    :wrap_text => true}
 
+      content_1_middle_par = styles.add_style :bg_color => 'FFFFFF', :border => Axlsx::STYLE_THIN_BORDER,  :alignment => { :horizontal => :center,
+                                                                                                                       :vertical => :center ,
+                                                                                                                       :wrap_text => true}
+
       content_1_fecha = styles.add_style :bg_color => 'B0B0B0', :format_code => 'DD/MM/YYYY', :border => Axlsx::STYLE_THIN_BORDER, :alignment => { :horizontal => :center,
                                                                                                                                                                                      :vertical => :center ,
                                                                                                                                                                                      :wrap_text => true}
+
+      content_1_fecha_par = styles.add_style :bg_color => 'FFFFFF', :format_code => 'DD/MM/YYYY', :border => Axlsx::STYLE_THIN_BORDER, :alignment => { :horizontal => :center,
+                                                                                                                                                   :vertical => :center ,
+                                                                                                                                                   :wrap_text => true}
 
 
       wb.add_worksheet(:name => 'Diseño de CP') do  |ws|
@@ -101,6 +119,8 @@ class ExcelController < ApplicationController
         fila_par = [content_1_middle_par, content_1_middle_par, content_1_middle_par, content_1_no_warp_par, content_1_middle_par, content_1_middle_par, content_1_fecha_par, content_1_middle_par, content_1_left_par, content_1_left_par]
 
         fila_impar_sin_prioridad = [content_1_middle, content_1_middle, content_1_middle, content_1_no_warp, content_1_middle, content_1_fecha, content_1_middle, content_1_left, content_1_left]
+
+        fila_par_sin_prioridad = [content_1_middle_par, content_1_middle_par, content_1_middle_par, content_1_no_warp_par, content_1_middle_par, content_1_fecha_par, content_1_middle_par, content_1_left_par, content_1_left_par]
         if params[:prioridad]
           ws.add_row ['CU',	'US',	'Subject',	'Test Name',	'Descripcion',	'Prioridad',	'Fecha',	'Step Name',	'Step Description',	'Expected Result'], :style => header
 
@@ -112,7 +132,16 @@ class ExcelController < ApplicationController
 
             subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
-            ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	'3 - Media',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar, :height=> altura_calculada
+            if i.odd?
+
+              ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	'3 - Media',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar, :height=> altura_calculada
+
+            else
+
+              ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	'3 - Media',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_par, :height=> altura_calculada
+
+            end
+
 
 
 
@@ -135,7 +164,17 @@ class ExcelController < ApplicationController
 
             subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
-            ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar_sin_prioridad, :height=> altura_calculada
+            if  i.odd?
+
+              ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_impar_sin_prioridad, :height=> altura_calculada
+
+            else
+
+              ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	'<Descripcion>',	Date.today,	'Step 1',	'<Step Description>',	'<Expected Result>'], :style => fila_par_sin_prioridad, :height=> altura_calculada
+
+            end
+
+
 
 
 
