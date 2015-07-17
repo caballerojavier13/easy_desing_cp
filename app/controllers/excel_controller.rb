@@ -30,14 +30,14 @@ class ExcelController < ApplicationController
       cu = b.cell(1,1)
 
 
-    num_cp = 1
+    num_cp = 0
 
     last_us = @us.at(0)
 
     short_cu = params[:nombre_corto].to_s
 
     0.upto(@casos_prueba.size - 1 ) do |i|
-      if @us.at(i).to_i != last_us
+      if @us.at(i).to_i != last_us.to_i
         last_us = @us.at(i)
         num_cp = 1
       else
