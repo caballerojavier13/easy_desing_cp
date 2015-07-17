@@ -7,7 +7,7 @@ class ExcelController < ApplicationController
   skip_before_action :verify_authenticity_token
   def download
 
-    begin
+    #begin
       if params[:extension] == 'xlsx'
         b = Roo::Excelx.new(params[:path])
       else
@@ -209,9 +209,9 @@ class ExcelController < ApplicationController
 
     send_file tmpfile.path , :filename => short_cu.to_s + '.xlsx'
 
-    rescue
-      redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
-    end
+    #rescue
+    #  redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
+    #end
 
   end
 
