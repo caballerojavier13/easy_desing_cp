@@ -1,12 +1,12 @@
 FacilitadorDeDiseOWeb::Application.routes.draw do
 
-  get 'excel/download' => 'home#index'
-
   post 'excel/download' => 'excel#download'
 
   post 'excel/upload' => 'excel#upload'
 
-  get 'excel/upload' => 'home#index'
+  get 'excel/download' => 'excel#download'
+
+  get 'excel/upload' => 'excel#upload'
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

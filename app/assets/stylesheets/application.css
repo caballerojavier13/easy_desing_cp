@@ -9,6 +9,13 @@ html{
 
 }
 
+
+@media screen and (max-width: 400px) {
+    .navbar-brand {
+        font-size: 14px;
+    }
+}
+
 .jumbotron{
   border: solid #337ab7;
   background-color: rgba(110, 183, 255, 0.85);
