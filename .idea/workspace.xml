@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/select2-bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/select2.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/select2.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/excel.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/excel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/excel_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/excel_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest-40497dc9d8b5987c8985eaf4d8c8b14c.json" afterPath="$PROJECT_DIR$/public/assets/manifest-40497dc9d8b5987c8985eaf4d8c8b14c.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/excel/upload.html.erb" afterPath="$PROJECT_DIR$/app/views/excel/upload.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Facilitador de Diseño Web.iws" />
@@ -30,7 +17,7 @@
     <file path="/upload.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437178687472" ignored="false" />
     <file path="/excel_uploader.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436667777603" ignored="false" />
     <file path="/download.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436710786639" ignored="false" />
-    <file path="/Dummy.txt" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437192268807" ignored="false" />
+    <file path="/Dummy.txt" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437192313580" ignored="false" />
     <file path="$PROJECT_DIR$/../ControlCredito/config/environments/production.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437007792592" ignored="false" />
     <file path="/production.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437181625022" ignored="false" />
     <file path="/excel.js" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437175844817" ignored="false" />
@@ -69,7 +56,7 @@
       <file leaf-file-name="select2-bootstrap.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/select2-bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="464" column="2" selection-start="15687" selection-end="15687" vertical-scroll-proportion="0.30756304">
+            <state line="462" column="117" selection-start="15618" selection-end="15618" vertical-scroll-proportion="0.25714287">
               <folding />
             </state>
           </provider>
@@ -569,6 +556,13 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
@@ -740,7 +734,11 @@
       <created>1437174519026</created>
       <updated>1437174519026</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mejora en el campo de descripción del caso de prueba y en la descripción del steo">
+      <created>1437192316572</created>
+      <updated>1437192316572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -765,7 +763,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -961,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/select2-bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="464" column="2" selection-start="15687" selection-end="15687" vertical-scroll-proportion="0.30756304">
+        <state line="462" column="117" selection-start="15618" selection-end="15618" vertical-scroll-proportion="0.25714287">
           <folding />
         </state>
       </provider>
