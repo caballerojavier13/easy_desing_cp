@@ -1,9 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree
 //= require bootstrap.min
-
+//= require select2.min
 
 $(document).on('change', '.btn-file', function() {
     var input = $(this),
@@ -25,4 +24,8 @@ $(document).ready( function() {
         }
 
     });
+});
+
+$(function() {
+    $(".select2").select2();
 });

@@ -1,20 +1,19 @@
-//*= require bootstrap
+/*
+*= require "bootstrap"
+*= require "select2"
 
+
+*/
 
 html{
 
 }
-
-
 
 .jumbotron{
   border: solid #337ab7;
   background-color: rgba(110, 183, 255, 0.85);
   color: white;
 }
-
-
-
 
 .btn-file{
   position: absolute;
@@ -32,4 +31,59 @@ html{
 input[readonly] {
   background-color: white !important;
   cursor: text !important;
+}
+
+textarea {
+    resize: none;
+    height: 200px !important;
+}
+
+
+
+
+.onoffswitch {
+    position: relative; width: 77px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 8px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 18px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Si";
+    padding-left: 12px;
+    background-color: #EEEEEE; color: #5cb85c;
+}
+.onoffswitch-inner:after {
+    content: "No";
+    padding-right: 12px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 28px; margin: 1px;
+    background: #A1A1A1;
+    position: absolute; top: 0; bottom: 0;
+    right: 43px;
+    border: 2px solid #FFFFFF; border-radius: 8px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+    background-color: #5cb85c;
 }
