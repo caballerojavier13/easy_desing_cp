@@ -6,7 +6,7 @@
     <div class="panel-body">
       <%= form_tag({:controller => :excel, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
           <input type="text" value="<%= @path %>" name="path" style="display: none"/>
-          <input type="text" value="<%= @cu %>" name="extension" style="display: none"/>
+          <input type="text" value="<%= @cu %>" name="cu" style="display: none"/>
           <input type="number" value="<%= @sprint %>" min="1" class="form-control" id="sprint" name="sprint" style="display: none">
           <input type="text" class="form-control" id="nombre_corto" name="nombre_corto" value="<%= @cu_name_short %>" style="display: none">
           <input type="checkbox" name="prioridad" id="prioridad" <% if @prioridad %>checked<% end %> style="display: none">
@@ -30,7 +30,7 @@
                   <div class="panel-body">
 
                     <div class="form-group">
-                      <select class="form-control select2" id="select_precondicion">
+                      <select class="form-control select2" id="select_precondicion" name="select_precondicion">
                         <option selected value="0">Una precondición para todos los casos de prueba</option>
                         <option value="1">Una precondición diferente para cada user story</option>
                       </select>
@@ -80,7 +80,7 @@
                   <div class="panel-body">
 
                     <div class="form-group">
-                      <select class="form-control select2" id="select_pasos">
+                      <select class="form-control select2" id="select_pasos" name="select_pasos">
                         <option selected value="0">Un paso para todos los casos de prueba</option>
                         <option value="1">Un paso diferente para cada user story</option>
                       </select>

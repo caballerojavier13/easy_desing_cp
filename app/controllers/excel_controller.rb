@@ -10,7 +10,11 @@ class ExcelController < ApplicationController
     if  request.get?
       redirect_to '/'
     else
-      #begin
+      begin
+
+        puts params['precondicion_us_1']
+
+
         if params[:path].to_s.split('.').last == 'xlsx'
           b = Roo::Excelx.new(params[:path])
         else
@@ -20,22 +24,36 @@ class ExcelController < ApplicationController
         @casos_prueba = Array.new
         @us = Array.new
 
+        @precondiciones = Array.new
+        @pasos = Array.new
+
         b.default_sheet = b.sheets.to_a.at(params[:cu].to_i)
 
+
+        last_us = ''
         2.upto(b.last_row) do |line|
 
           cp_name = b.cell(line,3).to_s
           @casos_prueba.append cp_name
           @us.append b.cell(line,2)
 
+
+          if params[:select_precondicion].to_i > 0
+            @precondiciones.append params['precondicion_us_' + @us.last.to_i.to_s]
+          else
+            @precondiciones.append params[:precondicion]
+          end
+
+          if params[:select_pasos].to_i > 0
+            @pasos.append params['pasos_us_' + @us.last.to_i.to_s]
+          else
+            @pasos.append params[:pasos]
+          end
+
+
         end
 
         cu = params[:nombre_cu]
-
-        step_desc = params[:pasos]
-
-        descripcion = "\n\n\n\nPrecondición: \n" + "#{params[:precondicion]}" + "\n\nResultado Esperado: \n \n"
-
 
         num_cp = 0
 
@@ -136,16 +154,16 @@ class ExcelController < ApplicationController
                 if us.to_i < 10
                   us = '0' + us.to_s
                 end
-
+                descripcion = "\n\nPrecondición: \n" + "#{@precondiciones.at(i).to_s}" + "\n\nResultado Esperado: \n \n"
                 subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
                 if i.odd?
 
-                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	'3 - Media',	Date.today,	'Step 1',	step_desc,	''], :style => fila_impar, :height=> altura_calculada
+                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	'3 - Media',	Date.today,	'Step 1',	@pasos.at(i).to_s,	''], :style => fila_impar, :height=> altura_calculada
 
                 else
 
-                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	'3 - Media',	Date.today,	'Step 1',	step_desc,	''], :style => fila_par, :height=> altura_calculada
+                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	'3 - Media',	Date.today,	'Step 1',	@pasos.at(i).to_s,	''], :style => fila_par, :height=> altura_calculada
 
                 end
 
@@ -165,16 +183,16 @@ class ExcelController < ApplicationController
                 if us.to_i < 10
                   us = '0' + us.to_s
                 end
-
+                descripcion = "\n\nPrecondición: \n" + "#{@precondiciones.at(i).to_s}" + "\n\nResultado Esperado: \n \n"
                 subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
                 if  i.odd?
 
-                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	Date.today,	'Step 1', step_desc,	''], :style => fila_impar_sin_prioridad, :height=> altura_calculada
+                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	Date.today,	'Step 1', @pasos.at(i).to_s,	''], :style => fila_impar_sin_prioridad, :height=> altura_calculada
 
                 else
 
-                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	Date.today,	'Step 1',	step_desc,	''], :style => fila_par_sin_prioridad, :height=> altura_calculada
+                  ws.add_row [cu,	@us.at(i),	subject,	@casos_prueba.at(i),	descripcion,	Date.today,	'Step 1',	@pasos.at(i).to_s,	''], :style => fila_par_sin_prioridad, :height=> altura_calculada
 
                 end
 
@@ -218,9 +236,9 @@ class ExcelController < ApplicationController
 
         send_file tmpfile.path , :filename => short_cu.to_s + '.xlsx'
 
-      #rescue
-      #  redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
-      #end
+      rescue
+        redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
+      end
     end
 
   end

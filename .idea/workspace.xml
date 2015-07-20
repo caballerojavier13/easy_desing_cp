@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/excel.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/excel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/excel.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/excel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/excel_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/excel_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/select2.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/select2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/excel/upload.html.erb" afterPath="$PROJECT_DIR$/app/views/excel/upload.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb" afterPath="$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb" />
     </list>
     <ignored path="Facilitador de Diseño Web.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Gemfile" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436670657673" ignored="false" />
     <file path="/database.yml" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436634157831" ignored="false" />
     <file path="/routes.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437353244352" ignored="false" />
-    <file path="/excel_controller.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437357753815" ignored="false" />
+    <file path="/excel_controller.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437433415781" ignored="false" />
     <file path="/application.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436712775859" ignored="false" />
     <file path="/index.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437198135804" ignored="false" />
     <file path="/a.rxml" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436643663095" ignored="false" />
@@ -25,7 +18,7 @@
     <file path="/upload.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437357673140" ignored="false" />
     <file path="/excel_uploader.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436667777603" ignored="false" />
     <file path="/download.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1436710786639" ignored="false" />
-    <file path="/Dummy.txt" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437350161064" ignored="false" />
+    <file path="/Dummy.txt" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437386346397" ignored="false" />
     <file path="$PROJECT_DIR$/../ControlCredito/config/environments/production.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437007792592" ignored="false" />
     <file path="/production.rb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437181625022" ignored="false" />
     <file path="/excel.js" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437355770161" ignored="false" />
@@ -34,7 +27,7 @@
     <file path="/select2-bootstrap.css" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437183511574" ignored="false" />
     <file path="/select2.css" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437356426629" ignored="false" />
     <file path="/excel.css" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437354327096" ignored="false" />
-    <file path="/upload_confirmation.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437357390037" ignored="false" />
+    <file path="/upload_confirmation.html.erb" changelist="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" time="1437432633721" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +50,7 @@
       <file leaf-file-name="excel_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/excel_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="281" column="53" selection-start="12055" selection-end="12055" vertical-scroll-proportion="0.43464053">
+            <state line="227" column="51" selection-start="11198" selection-end="11198" vertical-scroll-proportion="0.46448088">
               <folding />
             </state>
           </provider>
@@ -66,10 +59,8 @@
       <file leaf-file-name="upload.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/excel/upload.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="73" selection-start="424" selection-end="424" vertical-scroll-proportion="-4.375">
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="15" column="83" selection-start="851" selection-end="851" vertical-scroll-proportion="-9.375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +68,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="39" selection-start="1953" selection-end="1953" vertical-scroll-proportion="-23.0">
+            <state line="51" column="39" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,17 +77,8 @@
       <file leaf-file-name="upload_confirmation.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="85" selection-start="425" selection-end="425" vertical-scroll-proportion="-4.375">
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="32" column="109" selection-start="1999" selection-end="2018" vertical-scroll-proportion="14.5">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,8 +119,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/select2.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/excel.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/excel.css" />
-        <option value="$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/excel/upload.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/excel_controller.rb" />
       </list>
     </option>
@@ -152,9 +134,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="24" />
-    <option name="width" value="1282" />
-    <option name="height" value="752" />
+    <option name="y" value="26" />
+    <option name="width" value="1922" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -198,7 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -425,19 +406,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ControlCredito" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -809,14 +791,14 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: Facilitador de Diseño Web" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: Facilitador de Diseño Web" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.assets:precompile" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.assets:clean[keep]" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.assets:precompile" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.assets:clean[keep]" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Production: Facilitador de Diseño Web" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Development: Facilitador de Diseño Web" />
     </list>
     <recent_temporary>
       <list size="4">
@@ -895,18 +877,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1282" height="752" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="26" width="1922" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41558442" sideWeight="0.6333333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20779915" sideWeight="0.63412017" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44608566" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36666667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36587983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1017,81 +999,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="57" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="26" column="57" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/select2-bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="492" column="39" selection-start="16820" selection-end="16820" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="492" column="39" selection-start="16820" selection-end="16820" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/select2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="26" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/excel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="20" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/excel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="1" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="39" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/excel/upload.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="83" selection-start="851" selection-end="851" vertical-scroll-proportion="-9.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/excel/upload_confirmation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="85" selection-start="425" selection-end="425" vertical-scroll-proportion="-4.375">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/excel/upload.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="73" selection-start="424" selection-end="424" vertical-scroll-proportion="-4.375">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="39" selection-start="1953" selection-end="1953" vertical-scroll-proportion="-23.0">
+        <state line="32" column="109" selection-start="1999" selection-end="2018" vertical-scroll-proportion="14.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/excel_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="53" selection-start="12055" selection-end="12055" vertical-scroll-proportion="0.43464053">
+        <state line="227" column="51" selection-start="11198" selection-end="11198" vertical-scroll-proportion="0.46448088">
           <folding />
         </state>
       </provider>
