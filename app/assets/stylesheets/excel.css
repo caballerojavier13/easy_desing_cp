@@ -1,3 +1,7 @@
-// Place all the styles related to the excel controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.nav-tabs {
+    border: none !important;
+}
+
+.nav-tabs > li > a{
+    color: #5cb85c;
+}

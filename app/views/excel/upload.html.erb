@@ -4,59 +4,48 @@
   </div>
   <div class="panel panel-success">
     <div class="panel-body">
-      <%= form_tag({:controller => :excel, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
-        <input value="<%= @path %>" name="path" style="display: none"/>
-        <input value="<%= @extension %>" name="extension" style="display: none"/>
-        <div class="form-group ">
-          <label for="cu">Caso de Uso:</label>
-          <select class="form-control select2" id="cu" name="cu" required>
-                <option disabled selected hidden value=''> - Seleccione un Caso de Uso - </option>
-                <% i = 0 %>
-                <% @casos_usos.each do |cu| %>
-                    <option value="<%=i%>" > <%= cu %> </option>
-                    <% i = i + 1 %>
-                <% end %>
-          </select>
-        </div>
+      <%= form_tag({:controller => :excel, :action => :upload_confirmation}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
+          <input value="<%= @path %>" name="path" style="display: none"/>
+          <div class="form-group ">
+            <label for="cu">Caso de Uso:</label>
+            <select class="form-control select2" id="cu" name="cu" required>
+              <option disabled selected hidden value=''> - Seleccione un Caso de Uso - </option>
+              <% i = 0 %>
+              <% @casos_usos.each do |cu| %>
+                  <option value="<%=i%>" > <%= cu %> </option>
+                  <% i = i + 1 %>
+              <% end %>
+            </select>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="sprint">Sprint:</label>
             <input type="number" value="1" min="1" class="form-control" id="sprint" name="sprint" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="sprint">Nombre del Caso de Uso:</label>
             <input type="text" class="form-control" id="nombre_cu" name="nombre_cu" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="sprint">Nombre Corto del Caso de Uso:</label>
             <input type="text" class="form-control" id="nombre_corto" name="nombre_corto" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="prioridad">Prioridad:</label>
             <div class="onoffswitch">
-            <input type="checkbox" name="prioridad" class="onoffswitch-checkbox" id="prioridad" checked>
-                <label class="onoffswitch-label" for="prioridad">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-                </label>
+              <input type="checkbox" name="prioridad" class="onoffswitch-checkbox" id="prioridad" checked>
+              <label class="onoffswitch-label" for="prioridad">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
             </div>
-        </div>
+          </div>
 
-        <div class="form-group">
-            <label for="precondicion">Precondiciones Genéricas para todos los Casos de Prueba:</label>
-            <textarea class="form-control" id="precondicion" name="precondicion" required></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="pasos">Pasos para Todos los Casos de Prueba:</label>
-          <textarea class="form-control" id="pasos" name="pasos" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-success btn-block">Generar Excel</button>
+          <button type="submit" class="btn btn-success btn-block">Siguiente Paso</button>
       <% end %>
-      </div>
     </div>
+  </div>
 </div>

@@ -4,6 +4,10 @@ FacilitadorDeDiseOWeb::Application.routes.draw do
 
   post 'excel/upload' => 'excel#upload'
 
+  post 'excel/upload_confirmation' => 'excel#upload_confirmation'
+
+  get 'excel/upload_confirmation' => 'excel#upload_confirmation'
+
   get 'excel/download' => 'excel#download'
 
   get 'excel/upload' => 'excel#upload'

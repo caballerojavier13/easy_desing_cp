@@ -10,11 +10,8 @@ class ExcelController < ApplicationController
     if  request.get?
       redirect_to '/'
     else
-
-
-
-      begin
-        if params[:extension] == 'xlsx'
+      #begin
+        if params[:path].to_s.split('.').last == 'xlsx'
           b = Roo::Excelx.new(params[:path])
         else
           b = Roo::Excel.new(params[:path])
@@ -221,9 +218,9 @@ class ExcelController < ApplicationController
 
         send_file tmpfile.path , :filename => short_cu.to_s + '.xlsx'
 
-      rescue
-        redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
-      end
+      #rescue
+      #  redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
+      #end
     end
 
   end
@@ -236,9 +233,7 @@ class ExcelController < ApplicationController
 
       file =  params[:analisis]
 
-#file.original_filename
-
-      @extension = file.original_filename.split('.').last
+      @extension = file.original_filename.to_s.split('.').last
 
       #tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/")
 
@@ -267,6 +262,48 @@ class ExcelController < ApplicationController
         @casos_usos.append cu_name
       end
       @casos_usos.delete_at @casos_usos.size - 1
+
+    end
+  end
+
+
+  def upload_confirmation
+
+    if  request.get?
+      redirect_to '/'
+    else
+
+      @path = params[:path]
+
+      @extension = params[:extension].to_s
+
+      @prioridad = params[:prioridad]
+
+      if params[:path].to_s.split('.').last == 'xlsx'
+        b = Roo::Excelx.new(params[:path])
+      else
+        b = Roo::Excel.new(params[:path])
+      end
+
+      b.default_sheet = b.sheets.to_a.at(params[:cu].to_i)
+
+
+      @cu = params[:cu]
+      @us = Array.new
+
+      2.upto(b.last_row) do |line|
+
+        @us.append b.cell(line,2)
+
+      end
+
+      @us.uniq!
+
+      @cu_name = params[:nombre_cu].to_s
+
+      @cu_name_short = params[:nombre_corto].to_s
+
+      @sprint = params[:sprint]
 
     end
   end
