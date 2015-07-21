@@ -12,7 +12,7 @@
               <option disabled selected hidden value=''> - Seleccione un Caso de Uso - </option>
               <% i = 0 %>
               <% @casos_usos.each do |cu| %>
-                  <option value="<%=i%>" > <%= cu %> </option>
+                  <option value="<%=i%>" ><%=cu%></option>
                   <% i = i + 1 %>
               <% end %>
             </select>
