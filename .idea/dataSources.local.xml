@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Facilitador de Diseño Web: test" uuid="248282c0-4614-4b51-acd0-7ac8f1d81447">
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+    </data-source>
+    <data-source name="Rails Facilitador de Diseño Web: development" uuid="12d7f6fe-c2b5-420f-9348-f02693f815d7">
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+    </data-source>
+    <data-source name="Rails Facilitador de Diseño Web: production" uuid="786ec007-a45f-4347-9ebd-cb6ca7a74f1b">
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,2 @@
+module VisualReDesignTestHelper
+end
