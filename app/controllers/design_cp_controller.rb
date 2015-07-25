@@ -1,10 +1,17 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 require 'axlsx'
 require 'tempfile'
 
 
-class ExcelController < ApplicationController
+
+class DesignCpController < ApplicationController
 
   skip_before_action :verify_authenticity_token
+  def index
+
+  end
   def download
 
     if  request.get?

@@ -2,53 +2,56 @@
 <html>
 <head>
   <title>Facilitador de Diseño de Casos de Pruebas</title>
-  <link rel="icon" href="/assets/icon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link rel='icon' href='/assets/icon.ico'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= stylesheet_link_tag params[:controller] %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag params[:controller] %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+<nav class='navbar navbar-inverse navbar-fixed-top'>
+  <div class='container-fluid'>
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Facilitador de Diseño de Casos de Pruebas</a>
+    <div class='navbar-header' style='width: 100%;'>
+      <a class='navbar-brand' href='/' style='color:#BDBDBD; width: 100%;'>
+        <img alt='Brand' src='/assets/icon.ico' height='30px' style='float:left;top: -5px;position: relative; margin-right: 5px;'>
+        <span style="border-left: solid 1px gray; padding-left: 5px;">Facilitador de Diseño de Casos de Pruebas</span>
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse">
+    <div class='collapse navbar-collapse' id='navbar-collapse'>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-    <div class="container" style="margin-top: 70px">
-      <% if notice %>
-          <div class="alert alert-info alert-dismissible fade_in" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <p id="notice"><%= notice %></p>
-          </div>
-      <% end %>
-      <% if alert %>
-          <div class="alert alert-danger alert-dismissible fade_in" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <p id="notice"><%= alert %></p>
-          </div>
-      <% end %>
-    </div>
+<div class='container' style='margin-top: 70px'>
+  <% if notice %>
+      <div class='alert alert-info alert-dismissible fade_in' role='alert'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span></button>
+        <p id='notice'><%= notice %></p>
+      </div>
+  <% end %>
+  <% if alert %>
+      <div class='alert alert-danger alert-dismissible fade_in' role='alert'>
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span></button>
+        <p id='notice'><%= alert %></p>
+      </div>
+  <% end %>
+</div>
 
-  <%= yield %>
+<%= yield %>
 
 
-<nav class="navbar navbar-default navbar-fixed-bottom" style="border-color: #000000;">
+<nav class='navbar navbar-default navbar-fixed-bottom' style='border-color: #000000; background-color: white;'>
 
-    <div class="navbar-brand"><%= image_tag('aconca.jpg', :alt => 'Aconcagua', :style => '', :height => '20px', :class => '') %></div>
+  <div class='navbar-brand'><%= image_tag('aconca.jpg', :alt => 'Aconcagua', :style => '', :height => '20px', :class => '') %></div>
 
 </nav>
-
+<%= javascript_include_tag 'application'%>
+<%= javascript_include_tag params[:controller] %>
 </body>
 </html>

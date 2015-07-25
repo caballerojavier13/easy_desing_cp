@@ -4,6 +4,10 @@
 //= require bootstrap.min
 //= require select2.min
 
+$(function() {
+    $(".select2").select2();
+});
+
 $(document).on('change', '.btn-file', function() {
     var input = $(this),
         numFiles = input.get(0).files ? input.get(0).files.length : 1,
@@ -22,10 +26,5 @@ $(document).ready( function() {
         } else {
             if( log ) alert(log);
         }
-
     });
-});
-
-$(function() {
-    $(".select2").select2();
 });

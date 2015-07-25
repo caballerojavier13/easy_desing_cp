@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="text-center">Crear Plantilla de Excel del Diseño de Casos de Prueba</h1>
+  </div>
+</div>
+
+<div class="container" style="margin-bottom:70px">
+
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <%= form_tag({:controller => :design_cp, :action => :upload}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
+          <%= csrf_meta_tags %>
+          <div class="form-group">
+            <div class="col-12">
+              <label for="exampleInputFile">Excel con el análisis de los Casos de Prueba</label>
+              <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Seleccionar Archivo<%= file_field_tag :analisis, :accept => '.xls, .xlsx', :required => 'true', :class => 'btn-file' %>
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+              </div>
+            <span class="help-block">
+
+            </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <%= link_to('Atrás', root_path, class: 'btn btn-default btn-block') %>
+            </div>
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <button type="submit" class="btn btn-success btn-block">Subir Análisis</button>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

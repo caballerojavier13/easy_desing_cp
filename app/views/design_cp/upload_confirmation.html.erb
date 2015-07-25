@@ -4,7 +4,7 @@
   </div>
   <div class="panel panel-success">
     <div class="panel-body">
-      <%= form_tag({:controller => :excel, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
+      <%= form_tag({:controller => :design_cp, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
           <input type="text" value="<%= @path %>" name="path" style="display: none"/>
           <input type="text" value="<%= @cu %>" name="cu" style="display: none"/>
           <input type="number" value="<%= @sprint %>" min="1" class="form-control" id="sprint" name="sprint" style="display: none">
@@ -130,7 +130,14 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-success btn-block">Generar Excel</button>
+          <div class="row">
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <%= link_to('Cancelar', design_cp_path, class: 'btn btn-default btn-block') %>
+            </div>
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <button type="submit" class="btn btn-success btn-block">Descargar Excel</button>
+            </div>
+          </div>
       <% end %>
     </div>
   </div>

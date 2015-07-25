@@ -4,7 +4,7 @@
   </div>
   <div class="panel panel-success">
     <div class="panel-body">
-      <%= form_tag({:controller => :excel, :action => :upload_confirmation}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
+      <%= form_tag({:controller => :design_cp, :action => :upload_confirmation}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
           <input value="<%= @path %>" name="path" style="display: none"/>
           <div class="form-group ">
             <label for="cu">Caso de Uso:</label>
@@ -43,8 +43,14 @@
               </label>
             </div>
           </div>
-
-          <button type="submit" class="btn btn-success btn-block">Siguiente Paso</button>
+          <div class="row">
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <%= link_to('Cancelar', design_cp_path, class: 'btn btn-default btn-block') %>
+            </div>
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+              <button type="submit" class="btn btn-success btn-block">Siguiente Paso</button>
+            </div>
+          </div>
       <% end %>
     </div>
   </div>

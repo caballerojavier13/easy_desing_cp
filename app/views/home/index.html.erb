@@ -1,36 +1,33 @@
 <div class="jumbotron">
   <div class="container">
-    <h1 class="text-center">Crear Plantilla de Excel del Diseño de Casos de Prueba</h1>
+    <h1 class="text-center titulo">Facilitador de Diseño de Casos de Pruebas</h1>
   </div>
 </div>
 
 <div class="container" style="margin-bottom:70px">
-
-  <div class="panel panel-primary">
-    <div class="panel-body">
-      <%= form_tag({:controller => :excel, :action => :upload}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
-        <%= csrf_meta_tags %>
-        <div class="form-group">
-          <div class="col-12">
-            <label for="exampleInputFile">Excel con el análisis de los Casos de Prueba</label>
-            <div class="input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Seleccionar Archivo<%= file_field_tag :analisis, :accept => '.xls, .xlsx', :required => 'true', :class => 'btn-file' %>
-                    </span>
-                </span>
-              <input type="text" class="form-control" readonly>
-            </div>
-            <span class="help-block">
-
-            </span>
-          </div>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-success btn-block">Subir Análisis</button>
-        </div>
-
+  <div class="page-header">
+    <h2>Funcionalidades</h2>
+  </div>
+  <div class="list2">
+    <ol>
+      <%= link_to design_cp_path do %>
+          <li>
+            <p>
+              <em>Generar Plantilla de Diseño de Casos de Prueba a Partir del Análisis</em>
+              A partir de la plantilla con el análsis de los casos de prueba se genera un archivo de Excel con los casos de
+              prueba autonumerados, con precondiciones y pasos genéricos preconfigurados entre otras opciones.
+            </p>
+          </li>
       <% end %>
-    </div>
+      <%= link_to visual_re_design_test_index_url do %>
+          <li>
+            <p>
+              <em>Aplicar Diseño Visual a Plantilla de Diseño de Casos de Prueba</em>
+              A partir de un archivo de Excel con el diseño de casos de prueba, se le aplica el estilo visual estádar. Usado
+              principalmente para los casos de prueba exportados de ALM.
+            </p>
+          </li>
+      <% end %>
+    </ol>
   </div>
 </div>
