@@ -6,6 +6,7 @@ require 'tempfile'
 
 class VisualReDesignTestController < ApplicationController
   def index
+
   end
 
   def download
