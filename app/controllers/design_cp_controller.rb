@@ -15,7 +15,7 @@ class DesignCpController < ApplicationController
   def download
 
     if  request.get?
-      redirect_to '/'
+      redirect_to design_cp_path
     else
       begin
 
@@ -244,7 +244,7 @@ class DesignCpController < ApplicationController
         send_file tmpfile.path, :filename => short_cu.to_s + '.xlsx'
 
       rescue
-        redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
+        redirect_to design_cp_path, :alert => 'El archvivo fue removido por favor vuelva a subirlo'
       end
     end
 

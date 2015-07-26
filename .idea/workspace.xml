@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c60e4ed7-071a-4ffe-b0ce-b2a7fb9103d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Facilitador de Diseño Web.iml" afterPath="$PROJECT_DIR$/.idea/Facilitador de Diseño Web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/design_cp_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/design_cp_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/design_cp/index.html.erb" afterPath="$PROJECT_DIR$/app/views/design_cp/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/visual_re_design_test/index.html.erb" afterPath="$PROJECT_DIR$/app/views/visual_re_design_test/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/visual_re_design_test_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/visual_re_design_test_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Facilitador de Diseño Web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,8 +64,8 @@
       <file leaf-file-name="visual_re_design_test_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/visual_re_design_test_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8081705">
-              <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7122558">
+              <caret line="270" column="9" selection-start-line="270" selection-start-column="9" selection-end-line="270" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -114,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/design_cp_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="17" />
+              <caret line="246" column="34" selection-start-line="246" selection-start-column="34" selection-end-line="246" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -160,11 +151,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/design_cp.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/visual_re_design_test/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/design_cp_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/design_cp/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/design_cp_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/visual_re_design_test_controller.rb" />
       </list>
     </option>
@@ -1138,14 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/design_cp_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/design_cp/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1175,10 +1158,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/design_cp_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="246" column="34" selection-start-line="246" selection-start-column="34" selection-end-line="246" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/visual_re_design_test_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8081705">
-          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7122558">
+          <caret line="270" column="9" selection-start-line="270" selection-start-column="9" selection-end-line="270" selection-end-column="9" />
           <folding />
         </state>
       </provider>
