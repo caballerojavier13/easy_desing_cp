@@ -84,7 +84,7 @@ textarea {
     text-align: right;
 }
 .onoffswitch-switch {
-    display: block; width: 28px; margin: 1px;
+    display: block; width: 31px; margin: 1px;
     background: #A1A1A1;
     position: absolute; top: 0; bottom: 0;
     right: 43px;
@@ -95,7 +95,7 @@ textarea {
     margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px;
+    right: 1px;
     background-color: #5cb85c;
 }
 @media screen and (max-width: 700px) {
@@ -141,3 +141,23 @@ textarea {
     font-size: 20px;
 }
 
+.table-inner-border > tbody > tr > td{
+    border: solid 1px black;
+}
+.table-inner-border > thead > tr > th{
+    border: solid 1px black;
+}
+
+.table-width-fixed td,th {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.table-width-fixed th {
+    text-align: center;
+}
+.table-width-fixed .active {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #E4E4E4 !important;
+}

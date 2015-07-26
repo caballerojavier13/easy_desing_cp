@@ -241,7 +241,7 @@ class DesignCpController < ApplicationController
 
         p.serialize tmpfile.path
 
-        send_file tmpfile.path , :filename => short_cu.to_s + '.xlsx'
+        send_file tmpfile.path, :filename => short_cu.to_s + '.xlsx'
 
       rescue
         redirect_to '/', :alert => 'El archvivo fue removido por favor vuelva a subirlo'
@@ -259,8 +259,6 @@ class DesignCpController < ApplicationController
       file =  params[:analisis]
 
       @extension = file.original_filename.to_s.split('.').last
-
-      #tmp_file = Tempfile.new([file.original_filename,".#{@extension}"], "#{Rails.root}/tmp/")
 
       path = "#{Rails.root}/tmp/"
       filename = "#{file.original_filename.split('.').first}#{Process.pid}.#{@extension}"

@@ -1,37 +1,126 @@
-<div class="jumbotron">
-  <div class="container">
-    <h1 class="text-center">Aplicar Diseño Visual a Plantilla de Diseño de Casos de Prueba</h1>
+<div class='jumbotron'>
+  <div class='container'>
+    <h1 class='text-center'>Aplicar Diseño Visual a Plantilla de Diseño de Casos de Prueba</h1>
   </div>
 </div>
 
-<div class="container" style="margin-bottom:70px">
+<div class='container' style='margin-bottom:70px'>
 
-  <div class="panel panel-primary">
-    <div class="panel-body">
+  <div class='panel panel-primary'>
+    <div class='panel-body'>
       <%= form_tag({:controller => :visual_re_design_test, :action => :download}, :multipart => '1', :id => 'form_up', :method => :post) do   %>
           <%= csrf_meta_tags %>
-          <div class="form-group">
-            <div class="col-12">
-              <label for="exampleInputFile">Excel con el diseño de los Casos de Prueba</label>
-              <div class="input-group">
-                <span class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Seleccionar Archivo<%= file_field_tag :analisis, :accept => '.xls, .xlsx', :required => 'true', :class => 'btn-file' %>
+          <div class='form-group'>
+            <div class='col-12'>
+              <label for='design'>Excel con el diseño de los Casos de Prueba</label>
+              <div class='input-group'>
+                <span class='input-group-btn'>
+                    <span class='btn btn-primary'>
+                        Seleccionar Archivo<%= file_field_tag :design, :accept => '.xls, .xlsx', :required => 'true', :class => 'btn-file' %>
                     </span>
                 </span>
-                <input type="text" class="form-control" readonly>
+                <input type='text' class='form-control' readonly>
               </div>
-            <span class="help-block">
-
-            </span>
             </div>
           </div>
-          <div class="row">
+
+          <div class='form-group'>
+            <div class='row'>
+              <div class='col-md-3 col-sm-6 col-xs-6'>
+                <button type='button' class='btn btn-primary btn-block' data-toggle='modal' data-target='#modal_columnas'>Seleccionar Columnas</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class='modal fade' id='modal_columnas' tabindex='-1' role='dialog' aria-labelledby='modal_columnas'>
+            <div class='modal-dialog modal-lg'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                  <h4 class='modal-title'>Selección de Columnas</h4>
+                </div>
+
+                <div class='modal-body'>
+                  <div class="table-responsive">
+                    <table class="table table-inner-border table-width-fixed">
+                      <thead>
+                      <tr style="background: #337ab7; color: white;">
+                        <th>User Case</th>
+                        <th>User Story</th>
+                        <th>Subject</th>
+                        <th>Test Name</th>
+                        <th>Description</th>
+                        <th>Prioridad</th>
+                        <th>Fecha</th>
+                        <th>Step Named</th>
+                        <th>Step Description</th>
+                        <th>Expected Result</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="cu" class="onoffswitch-checkbox" id="cu" checked>
+                            <label class="onoffswitch-label" for="cu">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="us" class="onoffswitch-checkbox" id="us" checked>
+                            <label class="onoffswitch-label" for="us">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td class="active"> * Obligatorio * </td>
+                        <td class="active"> * Obligatorio * </td>
+                        <td class="active"> * Obligatorio * </td>
+                        <td>
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="prioridad" class="onoffswitch-checkbox" id="prioridad" checked>
+                            <label class="onoffswitch-label" for="prioridad">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="fecha" class="onoffswitch-checkbox" id="fecha" checked>
+                            <label class="onoffswitch-label" for="fecha">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                            </label>
+                          </div>
+                        </td>
+                        <td class="active"> * Obligatorio * </td>
+                        <td class="active"> * Obligatorio * </td>
+                        <td class="active"> * Obligatorio * </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class='modal-footer'>
+                  <p class="help-block" style="float: left; margin-top: 7px;">Debe respetar el orden de las columnas</p>
+                  <button type='button' class='btn btn-primary' style='width:150px;' data-dismiss='modal'>Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='row'>
             <div class='col-md-6 col-sm-6 col-xs-6'>
               <%= link_to('Atrás', root_path, class: 'btn btn-default btn-block') %>
             </div>
             <div class='col-md-6 col-sm-6 col-xs-6'>
-              <button type="submit" class="btn btn-success btn-block">Aplicar Estilo Visual</button>
+              <button type='submit' class='btn btn-success btn-block'>Aplicar Estilo Visual</button>
             </div>
           </div>
       <% end %>

@@ -1,8 +1,8 @@
 FacilitadorDeDiseOWeb::Application.routes.draw do
 
-  get 'visual_re_design_test/index'
+  get 're_design_test' => 'visual_re_design_test#index'
 
-  post 'visual_re_design_test/download'
+  post 're_design_test/download' => 'visual_re_design_test#download'
 
   post 'design_cp/download' => 'design_cp#download'
 
