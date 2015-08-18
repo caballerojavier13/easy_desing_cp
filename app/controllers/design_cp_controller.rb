@@ -80,8 +80,13 @@ class DesignCpController < ApplicationController
             us = '0' + @us.at(i).to_s
           end
 
-          if num_cp.to_i < 10
-            num_cp = '0' + num_cp.to_s
+          if num_cp.to_i < 100
+            if num_cp.to_i < 10
+              num_cp = '00' + num_cp.to_s
+            else
+              num_cp = '0' + num_cp.to_s
+            end
+            
           end
 
           @casos_prueba[i] = short_cu.to_s + ' - ' + us.to_s.split('.')[0] + ' - ' + num_cp.to_s + ' - ' + @casos_prueba.at(i).to_s
