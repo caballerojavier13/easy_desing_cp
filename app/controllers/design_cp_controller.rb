@@ -183,7 +183,7 @@ class DesignCpController < ApplicationController
 
               ws.add_data_validation('F2:F' + @us.size.to_s, {
                   :type => :list,
-                  :formula1 =>'1 - Critico;2 - Alta;3 - Media;4 - Baja',
+                  :formula1 =>"='Validaciones - Data'!$A$2:$A$5",
                   :showDropDown => false})
 
 
