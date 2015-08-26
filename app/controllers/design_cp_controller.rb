@@ -19,9 +19,6 @@ class DesignCpController < ApplicationController
     else
       begin
 
-        puts params['precondicion_us_1']
-
-
         if params[:path].to_s.split('.').last == 'xlsx'
           b = Roo::Excelx.new(params[:path])
         else
@@ -78,6 +75,8 @@ class DesignCpController < ApplicationController
 
           if @us.at(i).to_i < 10
             us = '0' + @us.at(i).to_s
+          else
+            us = @us.at(i).to_s
           end
 
           if num_cp.to_i < 100
@@ -86,7 +85,8 @@ class DesignCpController < ApplicationController
             else
               num_cp = '0' + num_cp.to_s
             end
-            
+          else
+            num_cp = num_cp.to_s
           end
 
           @casos_prueba[i] = short_cu.to_s + ' - ' + us.to_s.split('.')[0] + ' - ' + num_cp.to_s + ' - ' + @casos_prueba.at(i).to_s
