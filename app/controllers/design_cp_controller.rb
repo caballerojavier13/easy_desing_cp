@@ -166,7 +166,7 @@ class DesignCpController < ApplicationController
                 if us.to_i < 10
                   us = '0' + us.to_s
                 end
-                descripcion = "\n\nPrecondición: \n" + "#{@precondiciones.at(i).to_s}" + "\n\nResultado Esperado: \n \n"
+                descripcion = "Precondición: \n" + "#{@precondiciones.at(i).to_s}"
                 subject = '1 - Pruebas Funcionales\Sprint ' + sprint.to_s + '\\' + cu.to_s + '\\' + us.to_s
 
                 if i.odd?
